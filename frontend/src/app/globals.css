@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05010d;
+  --foreground: #ededed;
+  
+  --primary-purple: #8b5cf6; /* Vibrant purple */
+  --primary-accent: #6d28d9; /* Deep purple */
+  --teal-accent: #14b8a6; /* Teal */
+  --electric-blue: #3b82f6;
+  
+  --surface-dark: #0f0a1f;
+  --surface-border: #1e1536;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary-purple);
+  --color-primary-accent: var(--primary-accent);
+  --color-teal: var(--teal-accent);
+  --color-blue: var(--electric-blue);
+  --color-surface: var(--surface-dark);
+  --color-surface-border: var(--surface-border);
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-image: radial-gradient(circle at 50% 0%, rgba(109, 40, 217, 0.15) 0%, rgba(5, 1, 13, 1) 50%);
+  background-attachment: fixed;
+  antialiased: true;
+}
+
+/* Custom glow utility */
+@utility glow {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+@utility glow-teal {
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+}
